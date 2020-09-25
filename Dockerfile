@@ -47,8 +47,8 @@ RUN pip3 install . && \
 
 RUN pip install fdroidserver
 
-RUN groupadd -g 100 pmuser && \
-    useradd -m -u 99 -g pmuser pmuser
+RUN groupadd -g 999 pmuser && \
+    useradd -m -u 999 -g pmuser pmuser
 RUN chown -R pmuser:pmuser /data/fdroid && \
     chown -R pmuser:pmuser /opt/playmaker
 USER pmuser
